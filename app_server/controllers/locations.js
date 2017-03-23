@@ -3,7 +3,7 @@ var request               = require('request'),
       server: 'http://localhost:3000'
     };
 if(process.env.NODE_ENV === 'production'){
-  apiOptions.server   = 'http://boiling-springs-56587.herokuapp.com';
+  apiOptions.server   = 'https://boiling-springs-56587.herokuapp.com';
 }
 var path                  = '/api/locations',
     requestOptions        = {
