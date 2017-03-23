@@ -8,10 +8,13 @@ var ctrlOthers 		= require('../controllers/others');
 router.get('/', ctrlLocations.homeList);
 
 /* Get 'Location Info' page */
-router.get('/location', ctrlLocations.locationInfo);
+router.get('/location/:locationid', ctrlLocations.locationInfo);
 
 /* Get 'Add Review' page */
-router.get('/location/review/new', ctrlLocations.addReview);
+router.get('/location/:locationid/review/new', ctrlLocations.addReview);
+
+/* Post to API page */
+router.post('/location/:locationid/review/new', ctrlLocations.doAddReview);
 
 
 // Define others routes and mapping them to controllers functions
